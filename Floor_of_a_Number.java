@@ -9,7 +9,7 @@ public class Floor_of_a_Number {
     static int search(int[] a)
     {
         int start=0, end = a.length-1;
-        int val = 9;
+        int val = 10;
         while(start<=end)
         {
             int mid = (start+end)/2;
