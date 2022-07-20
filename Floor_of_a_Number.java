@@ -9,10 +9,13 @@ public class Floor_of_a_Number {
     static int search(int[] a)
     {
         int start=0, end = a.length-1;
-        int val = 4;
+        int val = 9;
         while(start<=end)
         {
             int mid = (start+end)/2;
+            if(val < a[0])
+                return -1;
+
             if(val == a[mid])
             {
                 return a[mid];

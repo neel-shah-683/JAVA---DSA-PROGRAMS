@@ -9,10 +9,14 @@ public class Ceiling_of_a_Number {
     static int search(int[] a)
     {
         int start=0, end = a.length-1;
-        int val = 17;
+        int val = 18;
         while(start<=end)
         {
             int mid = (start+end)/2;
+            if(val > a[a.length-1])
+            {
+                return -1;
+            }
             if(val == a[mid])
             {
                 return a[mid];
