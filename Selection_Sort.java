@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Selection_Sort {
     public static void main(String[] args) {
         
-        int[] arr = {4, 5, 1, 2, 3};
+        int[] arr = {-4, 5, -1, 2, -3};
         selection_sort(arr);
     }
     static void selection_sort(int[] a)
