@@ -1,7 +1,7 @@
 public class Prime_Number_Range {
     public static void main(String[] args) {
         
-        int num = 40;
+        int num = 37;
         rangePrime(num);
     }
     static void rangePrime(int n)
@@ -9,7 +9,7 @@ public class Prime_Number_Range {
         if(n<=1)
             System.out.println(-1);
 
-        for(int i=2;i<n;i++)
+        for(int i=2;i<=n;i++)
         {
             if(isPrime(i))
                 System.out.println(i);
