@@ -8,7 +8,7 @@ public class Recursion_nto1 {
     static int count=0;
     static int countZERO(int n)
     {
-        if(n==0)
+        if(n==0) 
             return count;
         if(n%10==0)
         {
