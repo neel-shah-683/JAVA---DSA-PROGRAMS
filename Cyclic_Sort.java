@@ -10,12 +10,16 @@ public class Cyclic_Sort{
     {
         for(int i=0;i<nums.length;)
         {
-            int rightIndex = nums[i] - 1;
+            int rightIndex = nums[i]-1;
             if(i!=rightIndex)
             {
                 int temp = nums[i];
                 nums[i] = nums[rightIndex];
                 nums[rightIndex] = temp;
+            }
+            else
+            {
+                i++;
             }
         }
         System.out.println(Arrays.toString(nums));
