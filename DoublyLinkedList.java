@@ -122,14 +122,14 @@ public class DoublyLinkedList {
         }
         System.out.print("Null");
 
-        // System.out.println("\n\nPrinting Reverse LinkedList:");
+        System.out.println("\n\nPrinting Reverse LinkedList:");
 
-        // while(last!=null)
-        // {
-        //     System.out.print(last.data+" -> ");
-        //     last = last.prev;
-        // }
-        // System.out.print("Null");
+        while(last!=null)
+        {
+            System.out.print(last.data+" -> ");
+            last = last.prev;
+        }
+        System.out.print("Null");
     }
     public static void main(String[] args) {
         
