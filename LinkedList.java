@@ -18,6 +18,12 @@ public class LinkedList{
             this.next = null;
             size++;
         }   
+        Node(int data, Node next)
+        {
+            this.data = data;
+            this.next = next;
+            size++;
+        }
     }
     //Add at First
     public void addFirst(int data)
@@ -86,6 +92,50 @@ public class LinkedList{
         secondlast.next = null;
     }
 
+    public void insertAtAnyIndex(int data, int index)
+    {
+        if(index==0)
+        {
+            addFirst(data);
+            return ;
+        }
+        if(index==size)
+        {
+            addLast(data);
+            return ;
+        }
+
+        Node temp = head;
+        for(int i=1;i<index;i++)
+        {
+            temp = temp.next;
+        }
+        Node newNode = new Node(data,temp.next);
+        temp.next = newNode;
+        size++;
+
+    }
+    public void deleteAny(int index)
+    {
+        if(index==0)
+        {
+            deleteFirst();
+            return ;
+        }
+        if(index==size-1)
+        {
+            deleteLast();
+            return ;
+        }
+
+        Node temp = head;
+        for(int i=1;i<index;i++)
+        {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+    }
+    
     public int getSize()
     {
         return size;
@@ -115,6 +165,7 @@ public class LinkedList{
         list.addFirst(10);
         list.addLast(15);
         list.addLast(20);
+        list.addLast(25);
 
         list.printList();
 
@@ -130,5 +181,12 @@ public class LinkedList{
         list.addFirst(25);
         list.printList();
         System.out.println("\nSize = "+list.getSize());
+
+        list.insertAtAnyIndex(100, 3);
+        list.printList();
+
+        System.out.println();
+        list.deleteAny(3);
+        list.printList();
     }
 }
