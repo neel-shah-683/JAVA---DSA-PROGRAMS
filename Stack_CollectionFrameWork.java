@@ -2,16 +2,35 @@ import java.util.Stack;
 
 public class Stack_CollectionFrameWork {
     
+    public static void pushAtButtom(int data, Stack<Integer> s)
+    {
+        if(s.isEmpty())
+        {
+            s.push(data);
+            return ;
+        }
+        int top = s.pop();
+        pushAtButtom(data, s);
+        s.push(top);
+    }      
+    public  static void reverseStack(Stack<Integer> s)
+    {
+        if(s.isEmpty())
+        {
+            return ;
+        }
+        int top = s.pop();
+        reverseStack(s);
+        pushAtButtom(top, s);
+    } 
     public static void main(String[] args) {
         
     Stack<Integer> s = new Stack<>();
     s.push(1);
     s.push(2);
     s.push(3);
-    s.push(4);
-    s.push(5);
-    s.push(6);
 
+    reverseStack(s);
     if(s.isEmpty())
     {
         System.out.println("Stack is Empty:");
