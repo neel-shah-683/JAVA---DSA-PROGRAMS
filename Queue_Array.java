@@ -42,9 +42,9 @@ public class Queue_Array {
                 for(int i=0;i<rear;i++)
                 {
                     arr[i] = arr[i+1];
-                }  
+                }
                 rear--;
-                return front;        
+                return front;
             }
         }
         public int peek()
@@ -54,9 +54,7 @@ public class Queue_Array {
                 System.out.println("Queue is Empty:");
                 return -1;
             }
-            int x = arr[0];
-            return x;
-
+            return arr[0];
         }
     }
     public static void main(String[] args) {
