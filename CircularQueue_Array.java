@@ -2,7 +2,7 @@ public class CircularQueue_Array {
     
     static class CircularQueue{
         static int[] a;
-        static int size;
+        int size;
         static int rear = -1, front = -1;
         CircularQueue(int n)
         {
