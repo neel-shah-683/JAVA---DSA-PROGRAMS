@@ -1,9 +1,9 @@
 public class CircularQueue_Array {
     
     static class CircularQueue{
-        static int[] a;
+        int[] a;
         int size;
-        static int rear = -1, front = -1;
+        int rear = -1, front = -1;
         CircularQueue(int n)
         {
             a = new int[n];
