@@ -3,7 +3,7 @@ public class Queue_Array {
     static class Queue{
         static int[] arr;
         int size;
-        static int rear = -1;
+        static int rear = -1, front = -1;
 
         Queue(int n)
         {
@@ -24,6 +24,10 @@ public class Queue_Array {
             }
             else
             {
+                if(front==-1)
+                {
+                    front = 0;
+                }
                 rear++;
                 arr[rear] = data;
             }
@@ -38,13 +42,14 @@ public class Queue_Array {
             }
             else
             {
-                int front = arr[0];
-                for(int i=0;i<rear;i++)
+                int x = arr[front];
+                if(rear==front)
+                    rear=front=-1;
+                else
                 {
-                    arr[i] = arr[i+1];
+                    front++;
                 }
-                rear--;
-                return front;
+                return x;
             }
         }
         public int peek()
@@ -54,7 +59,7 @@ public class Queue_Array {
                 System.out.println("Queue is Empty:");
                 return -1;
             }
-            return arr[0];
+            return arr[front];
         }
     }
     public static void main(String[] args) {
