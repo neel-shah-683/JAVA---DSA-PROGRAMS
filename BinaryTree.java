@@ -257,7 +257,7 @@ public class BinaryTree
                 
             }  
             if(flag==1)
-                return sum/2;        
+                return sum/size;        
         }
         return 0;
     }
@@ -306,6 +306,6 @@ public class BinaryTree
         System.out.println(bt.sumofNodesKthLevel(root,1)); 
         
         System.out.println("\nAvgOfNodes At Kth Level--->");
-        System.out.println(bt.avgofNodesKthLevel(root,2)); 
+        System.out.println(bt.avgofNodesKthLevel(root,1)); 
     }
 }
